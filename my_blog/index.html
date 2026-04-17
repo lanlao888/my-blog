@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>辽魅| 博客</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f4f7f6; color: #333; margin: 0; display: flex; flex-direction: column; align-items: center; }
+        header { background: #2c3e50; color: white; width: 100%; padding: 3rem 0; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .container { max-width: 800px; width: 90%; margin: 2rem 0; }
+        .post-card { background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 2rem; transition: transform 0.3s; cursor: pointer; }
+        .post-card:hover { transform: translateY(-5px); box-shadow: 0 8px 15px rgba(0,0,0,0.1); }
+        h1 { margin: 0; font-size: 2.5rem; }
+        h2 { color: #2c3e50; margin-top: 0; }
+        p { line-height: 1.6; color: #666; }
+        .tag { background: #e74c3c; color: white; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.8rem; }
+        footer { margin-top: auto; padding: 2rem; color: #999; font-size: 0.9rem; }
+    </style>
+</head>
+<script>
+    const quotes = [
+        "今天也是努力折腾域名的一天！",
+        "代码改变世界，但我只想改变我的主页。",
+        "与其向往，不如出发。",
+        "坚持每天进步一点点。"
+    ];
+    // 每天根据日期自动选一句
+    const day = new Date().getDate();
+    const todayQuote = quotes[day % quotes.length];
+    document.querySelector('header p').innerText = todayQuote;
+</script>
+<body>
+
+<header>
+    <h1>lanlao的博客</h1>
+    <p>关于技术、生活，以及折腾域名的那些事儿</p>
+</header>
+
+<div class="container">
+    <div class="post-card">
+        <span class="tag">建站日记</span>
+        <h2>你好，互联网！这是我的第一个博客</h2>
+        <p>在折腾了梯子、Worker、DNS解析之后，我终于在 Cloudflare Pages 上安了家。这里虽然还是一片荒原，但每一段代码都是我自己搬来的砖...</p>
+        <small>发布于：2026年4月17日</small>
+    </div>
+
+    <div class="post-card">
+        <span class="tag">技术探索</span>
+        <h2>为什么我不建议在 Cloudflare 上直接跑 Python 商城？</h2>
+        <p>今天研究了一下 Pages 的机制，发现它更适合存放精美的静态网页。对于 Python 这种需要强大后端的程序，也许我该去物色一台 VPS 了...</p>
+        <small>发布于：2026年4月17日</small>
+    </div>
+</div>
+
+<footer>
+    © 2026 liaomei.us.ci | 由 Cloudflare Pages 提供强力驱动
+</footer>
+
+</body>
+</html>
