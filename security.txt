@@ -1,8 +1,0 @@
-# 漏洞报告联系方式
-Contact: mailto:liuxiaoxi88888@gmail.com
-
-# 语言偏好
-Preferred-Languages: zh, en
-
-# 有效期（建议设置为一年左右，过期后记得更新）
-Expires: 2027-05-03T18:00:00Z
